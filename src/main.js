@@ -7,6 +7,8 @@ import { renderCountries } from "./ui/countryList.js";
 import { filterChannels } from "./utils/filter.js";
 
 import { favoriChange } from "./utils/favorites.js";
+import { hiddenIds , blackList} from "./utils/blackList.js";
+import { renderBlackList } from "./ui/blacklistUi.js";
 async function init() {
     hideError();
     showLoader();
@@ -18,20 +20,34 @@ async function init() {
         //search
         let selectedCountry = "all";
 
+        // function updateList(){
+        //     let result = channels;
+
+        //     if(selectedCountry !== "all"){
+        //         result = channels.filter((c) => c.country === selectedCountry);
+        //     }
+
+        //     result = filterChannels(result);
+        //     renderChannels(result) ;
+        // }
         function updateList(){
-            let result = channels;
+            let result = channels.filter((c)=> !hiddenIds.includes(c.id));
 
             if(selectedCountry !== "all"){
-                result = channels.filter((c) => c.country === selectedCountry);
+                result = result.filter((c) => c.country === selectedCountry);
             }
 
             result = filterChannels(result);
             renderChannels(result) ;
+            renderBlackList(channels.filter((c)=>hiddenIds.includes(c.id)))
+            
         }
 
         renderChannels(channels);
         renderCountries(channels);
-        console.log(channels);
+        renderBlackList([]);
+        blackList(updateList);
+        // console.log(channels);
 
         searchInput.addEventListener('input' , updateList);
 
@@ -49,21 +65,26 @@ async function init() {
 
             if(!boutton) return;
 
-            const count = boutton.dataset.country ;
-            let filtred = channels ;
-
-            if(count !== "all"){
-                filtred = channels.filter((c) => c.country === count);
-            }
-
-            renderChannels(filtred);
+            selectedCountry = boutton.dataset.country;
             document.getElementById('country-title').textContent = boutton.dataset.name;
             sidebar.classList.add('hidden');
+            // const count = boutton.dataset.country ;
+            // let filtred = channels ;
+
+            // if(count !== "all"){
+            //     filtred = channels.filter((c) => c.country === count);
+            // }
+
+            // renderChannels(filtred);
+            // document.getElementById('country-title').textContent = boutton.dataset.name;
+            // sidebar.classList.add('hidden');
+            updateList();
         })
         favoriChange();
 
         //click sur une chaine
         document.getElementById('channel-list').addEventListener('click' , function(e){
+            if(e.target.closest('.spam')) return;
             const button = e.target.closest('button');
 
             if(!button) return;
@@ -81,5 +102,6 @@ async function init() {
 }
 
 init();
+
 
 
