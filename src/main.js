@@ -5,6 +5,8 @@ import { renderChannels } from "./ui/channelList.js";
 import { renderPreview } from "./ui/preview.js";
 import { renderCountries } from "./ui/countryList.js";
 import { filterChannels } from "./utils/filter.js";
+
+import { favoriChange } from "./utils/favorites.js";
 async function init() {
     hideError();
     showLoader();
@@ -58,6 +60,7 @@ async function init() {
             document.getElementById('country-title').textContent = boutton.dataset.name;
             sidebar.classList.add('hidden');
         })
+        favoriChange();
 
         //click sur une chaine
         document.getElementById('channel-list').addEventListener('click' , function(e){
