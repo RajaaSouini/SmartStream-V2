@@ -1,0 +1,614 @@
+[
+  {
+    "id": "1",
+    "channelNumber": "1057",
+    "name": "FR - DISCOVERY ID FHD",
+    "category": "DOCUMENTAIRE",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=DID&size=128&background=0EA5E9&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/discovery/800/450",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Habitations en péril",
+      "startTime": "20:50",
+      "endTime": "21:45",
+      "progressPercentage": 65
+    }
+  },
+  {
+    "id": "2",
+    "channelNumber": "1058",
+    "name": "FR - TLC FHD",
+    "category": "DOCUMENTAIRE",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=TLC&size=128&background=0EA5E9&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/tlc/800/450",
+    "streamUrl": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "La maison de mes rêves",
+      "startTime": "20:30",
+      "endTime": "21:20",
+      "progressPercentage": 40
+    }
+  },
+  {
+    "id": "3",
+    "channelNumber": "1067",
+    "name": "FR - RMC DECOUVERTE FHD",
+    "category": "DOCUMENTAIRE",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=RMC&size=128&background=0EA5E9&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/rmc/800/450",
+    "streamUrl": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Hors de contrôle : Les megastructures",
+      "startTime": "21:05",
+      "endTime": "22:00",
+      "progressPercentage": 20
+    }
+  },
+  {
+    "id": "4",
+    "channelNumber": "1070",
+    "name": "FR - NATURE PLANET FHD",
+    "category": "DOCUMENTAIRE",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=NP&size=128&background=0EA5E9&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/nature/800/450",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Les secrets de l'océan",
+      "startTime": "20:15",
+      "endTime": "21:15",
+      "progressPercentage": 75
+    }
+  },
+  {
+    "id": "5",
+    "channelNumber": "2001",
+    "name": "FR - SPORT ARENA 1 FHD",
+    "category": "SPORT",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=SA1&size=128&background=22C55E&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/arena1/800/450",
+    "streamUrl": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Ligue 1 : match en direct",
+      "startTime": "20:45",
+      "endTime": "22:45",
+      "progressPercentage": 30
+    }
+  },
+  {
+    "id": "6",
+    "channelNumber": "2002",
+    "name": "FR - SPORT ARENA 2 FHD",
+    "category": "SPORT",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=SA2&size=128&background=22C55E&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/arena2/800/450",
+    "streamUrl": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Top 14 : le résumé",
+      "startTime": "20:00",
+      "endTime": "21:30",
+      "progressPercentage": 85
+    }
+  },
+  {
+    "id": "7",
+    "channelNumber": "2003",
+    "name": "FR - TENNIS LIVE FHD",
+    "category": "SPORT",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=TL&size=128&background=22C55E&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/tennis/800/450",
+    "streamUrl": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Masters : demi-finale",
+      "startTime": "19:30",
+      "endTime": "22:00",
+      "progressPercentage": 55
+    }
+  },
+  {
+    "id": "8",
+    "channelNumber": "2004",
+    "name": "FR - FORMULA ZONE FHD",
+    "category": "SPORT",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=F1&size=128&background=22C55E&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/formula/800/450",
+    "streamUrl": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Grand Prix : essais libres",
+      "startTime": "20:00",
+      "endTime": "21:30",
+      "progressPercentage": 10
+    }
+  },
+  {
+    "id": "9",
+    "channelNumber": "3001",
+    "name": "FR - CINE PREMIERE FHD",
+    "category": "CINEMA",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=CP&size=128&background=F59E0B&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/cine1/800/450",
+    "streamUrl": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Le dernier voyage",
+      "startTime": "20:55",
+      "endTime": "22:50",
+      "progressPercentage": 45
+    }
+  },
+  {
+    "id": "10",
+    "channelNumber": "3002",
+    "name": "FR - CINE CLASSIC FHD",
+    "category": "CINEMA",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=CC&size=128&background=F59E0B&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/classic/800/450",
+    "streamUrl": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Les nuits blanches",
+      "startTime": "21:00",
+      "endTime": "22:40",
+      "progressPercentage": 25
+    }
+  },
+  {
+    "id": "11",
+    "channelNumber": "3003",
+    "name": "FR - CINE ACTION FHD",
+    "category": "CINEMA",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=CA&size=128&background=F59E0B&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/action/800/450",
+    "streamUrl": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Course contre la montre",
+      "startTime": "20:40",
+      "endTime": "22:30",
+      "progressPercentage": 60
+    }
+  },
+  {
+    "id": "12",
+    "channelNumber": "3004",
+    "name": "FR - CINE FAMILLE FHD",
+    "category": "CINEMA",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=CF&size=128&background=F59E0B&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/famille/800/450",
+    "streamUrl": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "L'aventure du siècle",
+      "startTime": "20:30",
+      "endTime": "22:15",
+      "progressPercentage": 70
+    }
+  },
+  {
+    "id": "13",
+    "channelNumber": "4001",
+    "name": "FR - INFO 24 FHD",
+    "category": "INFO",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=I24&size=128&background=EF4444&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/info24/800/450",
+    "streamUrl": "https://static.france24.com/live/F24_FR_HI_HLS/live_web.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Le journal de 21h",
+      "startTime": "21:00",
+      "endTime": "21:45",
+      "progressPercentage": 35
+    }
+  },
+  {
+    "id": "14",
+    "channelNumber": "4002",
+    "name": "FR - MONDE INFO FHD",
+    "category": "INFO",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=MI&size=128&background=EF4444&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/monde/800/450",
+    "streamUrl": "https://static.france24.com/live/F24_FR_HI_HLS/live_web.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Débat : l'actualité",
+      "startTime": "20:30",
+      "endTime": "21:30",
+      "progressPercentage": 80
+    }
+  },
+  {
+    "id": "15",
+    "channelNumber": "4003",
+    "name": "FR - ECO NEWS FHD",
+    "category": "INFO",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=EN&size=128&background=EF4444&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/econews/800/450",
+    "streamUrl": "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Les marchés en direct",
+      "startTime": "20:45",
+      "endTime": "21:15",
+      "progressPercentage": 50
+    }
+  },
+  {
+    "id": "16",
+    "channelNumber": "5001",
+    "name": "FR - KIDS FUN FHD",
+    "category": "JEUNESSE",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=KF&size=128&background=EC4899&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/kidsfun/800/450",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Les petits explorateurs",
+      "startTime": "19:30",
+      "endTime": "20:30",
+      "progressPercentage": 90
+    }
+  },
+  {
+    "id": "17",
+    "channelNumber": "5002",
+    "name": "FR - TOON TIME FHD",
+    "category": "JEUNESSE",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=TT&size=128&background=EC4899&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/toon/800/450",
+    "streamUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Super Héros en herbe",
+      "startTime": "20:00",
+      "endTime": "20:45",
+      "progressPercentage": 15
+    }
+  },
+  {
+    "id": "18",
+    "channelNumber": "5003",
+    "name": "FR - JUNIOR TV FHD",
+    "category": "JEUNESSE",
+    "country": "France",
+    "countryCode": "FR",
+    "logo": "https://ui-avatars.com/api/?name=JTV&size=128&background=EC4899&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/junior/800/450",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Le monde de Léo",
+      "startTime": "19:45",
+      "endTime": "20:35",
+      "progressPercentage": 95
+    }
+  },
+  {
+    "id": "19",
+    "channelNumber": "6001",
+    "name": "MA - ATLAS INFO FHD",
+    "category": "INFO",
+    "country": "Maroc",
+    "countryCode": "MA",
+    "logo": "https://ui-avatars.com/api/?name=AI&size=128&background=EF4444&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/atlasinfo/800/450",
+    "streamUrl": "https://static.france24.com/live/F24_AR_HI_HLS/live_web.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Journal de 20h",
+      "startTime": "20:00",
+      "endTime": "20:45",
+      "progressPercentage": 50
+    }
+  },
+  {
+    "id": "20",
+    "channelNumber": "6002",
+    "name": "MA - SAHARA SPORT FHD",
+    "category": "SPORT",
+    "country": "Maroc",
+    "countryCode": "MA",
+    "logo": "https://ui-avatars.com/api/?name=SS&size=128&background=22C55E&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/sahara/800/450",
+    "streamUrl": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Botola : le match",
+      "startTime": "20:30",
+      "endTime": "22:30",
+      "progressPercentage": 35
+    }
+  },
+  {
+    "id": "21",
+    "channelNumber": "6003",
+    "name": "MA - CINE MAROC FHD",
+    "category": "CINEMA",
+    "country": "Maroc",
+    "countryCode": "MA",
+    "logo": "https://ui-avatars.com/api/?name=CM&size=128&background=F59E0B&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/cinema/800/450",
+    "streamUrl": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Film du soir",
+      "startTime": "21:00",
+      "endTime": "22:45",
+      "progressPercentage": 40
+    }
+  },
+  {
+    "id": "22",
+    "channelNumber": "6004",
+    "name": "MA - DECOUVERTE MAROC FHD",
+    "category": "DOCUMENTAIRE",
+    "country": "Maroc",
+    "countryCode": "MA",
+    "logo": "https://ui-avatars.com/api/?name=DM&size=128&background=0EA5E9&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/atlas/800/450",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Les routes de l'Atlas",
+      "startTime": "20:15",
+      "endTime": "21:15",
+      "progressPercentage": 60
+    }
+  },
+  {
+    "id": "23",
+    "channelNumber": "6005",
+    "name": "MA - KIDS ATLAS FHD",
+    "category": "JEUNESSE",
+    "country": "Maroc",
+    "countryCode": "MA",
+    "logo": "https://ui-avatars.com/api/?name=KA&size=128&background=EC4899&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/kidsatlas/800/450",
+    "streamUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Contes et légendes",
+      "startTime": "19:30",
+      "endTime": "20:30",
+      "progressPercentage": 85
+    }
+  },
+  {
+    "id": "24",
+    "channelNumber": "6006",
+    "name": "MA - MAGHREB NEWS FHD",
+    "category": "INFO",
+    "country": "Maroc",
+    "countryCode": "MA",
+    "logo": "https://ui-avatars.com/api/?name=MN&size=128&background=EF4444&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/maghreb/800/450",
+    "streamUrl": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Débat du soir",
+      "startTime": "21:00",
+      "endTime": "22:00",
+      "progressPercentage": 25
+    }
+  },
+  {
+    "id": "25",
+    "channelNumber": "7001",
+    "name": "ES - NOTICIAS 24H FHD",
+    "category": "INFO",
+    "country": "Espagne",
+    "countryCode": "ES",
+    "logo": "https://ui-avatars.com/api/?name=N24&size=128&background=EF4444&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/noticias/800/450",
+    "streamUrl": "https://static.france24.com/live/F24_ES_HI_HLS/live_web.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "El telediario",
+      "startTime": "21:00",
+      "endTime": "21:45",
+      "progressPercentage": 30
+    }
+  },
+  {
+    "id": "26",
+    "channelNumber": "7002",
+    "name": "ES - DEPORTES LIVE FHD",
+    "category": "SPORT",
+    "country": "Espagne",
+    "countryCode": "ES",
+    "logo": "https://ui-avatars.com/api/?name=DL&size=128&background=22C55E&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/deportes/800/450",
+    "streamUrl": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "LaLiga : el partido",
+      "startTime": "20:45",
+      "endTime": "22:45",
+      "progressPercentage": 45
+    }
+  },
+  {
+    "id": "27",
+    "channelNumber": "7003",
+    "name": "ES - CINE ESPANA FHD",
+    "category": "CINEMA",
+    "country": "Espagne",
+    "countryCode": "ES",
+    "logo": "https://ui-avatars.com/api/?name=CE&size=128&background=F59E0B&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/cinees/800/450",
+    "streamUrl": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "La gran película",
+      "startTime": "21:30",
+      "endTime": "23:15",
+      "progressPercentage": 20
+    }
+  },
+  {
+    "id": "28",
+    "channelNumber": "7004",
+    "name": "ES - DOCU MUNDO FHD",
+    "category": "DOCUMENTAIRE",
+    "country": "Espagne",
+    "countryCode": "ES",
+    "logo": "https://ui-avatars.com/api/?name=DM&size=128&background=0EA5E9&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/docu/800/450",
+    "streamUrl": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Rutas del mundo",
+      "startTime": "20:30",
+      "endTime": "21:30",
+      "progressPercentage": 55
+    }
+  },
+  {
+    "id": "29",
+    "channelNumber": "7005",
+    "name": "ES - PEQUES TV FHD",
+    "category": "JEUNESSE",
+    "country": "Espagne",
+    "countryCode": "ES",
+    "logo": "https://ui-avatars.com/api/?name=PT&size=128&background=EC4899&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/peques/800/450",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Aventuras de Lola",
+      "startTime": "19:00",
+      "endTime": "20:00",
+      "progressPercentage": 80
+    }
+  },
+  {
+    "id": "30",
+    "channelNumber": "8001",
+    "name": "GB - NEWS WORLD FHD",
+    "category": "INFO",
+    "country": "Royaume-Uni",
+    "countryCode": "GB",
+    "logo": "https://ui-avatars.com/api/?name=NW&size=128&background=EF4444&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/newsworld/800/450",
+    "streamUrl": "https://static.france24.com/live/F24_EN_HI_HLS/live_web.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "The Evening News",
+      "startTime": "20:00",
+      "endTime": "21:00",
+      "progressPercentage": 65
+    }
+  },
+  {
+    "id": "31",
+    "channelNumber": "8002",
+    "name": "GB - SPORT ONE FHD",
+    "category": "SPORT",
+    "country": "Royaume-Uni",
+    "countryCode": "GB",
+    "logo": "https://ui-avatars.com/api/?name=S1&size=128&background=22C55E&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/sportone/800/450",
+    "streamUrl": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Premier League Live",
+      "startTime": "19:30",
+      "endTime": "21:30",
+      "progressPercentage": 70
+    }
+  },
+  {
+    "id": "32",
+    "channelNumber": "8003",
+    "name": "GB - MOVIE CLASSICS FHD",
+    "category": "CINEMA",
+    "country": "Royaume-Uni",
+    "countryCode": "GB",
+    "logo": "https://ui-avatars.com/api/?name=MC&size=128&background=F59E0B&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/classics/800/450",
+    "streamUrl": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Midnight Express",
+      "startTime": "21:00",
+      "endTime": "22:50",
+      "progressPercentage": 35
+    }
+  },
+  {
+    "id": "33",
+    "channelNumber": "8004",
+    "name": "GB - NATURE UK FHD",
+    "category": "DOCUMENTAIRE",
+    "country": "Royaume-Uni",
+    "countryCode": "GB",
+    "logo": "https://ui-avatars.com/api/?name=NUK&size=128&background=0EA5E9&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/natureuk/800/450",
+    "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Wild Britain",
+      "startTime": "20:00",
+      "endTime": "21:00",
+      "progressPercentage": 90
+    }
+  },
+  {
+    "id": "34",
+    "channelNumber": "8005",
+    "name": "GB - KIDS UK FHD",
+    "category": "JEUNESSE",
+    "country": "Royaume-Uni",
+    "countryCode": "GB",
+    "logo": "https://ui-avatars.com/api/?name=KUK&size=128&background=EC4899&color=fff&bold=true&rounded=true",
+    "previewImage": "https://picsum.photos/seed/kidsuk/800/450",
+    "streamUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
+    "isLive": true,
+    "epg": {
+      "currentProgram": "Little Explorers",
+      "startTime": "18:30",
+      "endTime": "19:30",
+      "progressPercentage": 50
+    }
+  }
+]
