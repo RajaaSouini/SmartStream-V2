@@ -35,7 +35,7 @@ async function updateChannels(){
             headers: {"Content-Type" : "application/json"},
             body: JSON.stringify({isFavorite : false , isBlackListed: false}),
         });
-        console.log(`${channel.name}`);
+        //console.log(`${channel.name}`);
         }
     console.log('Terminé');
 }
