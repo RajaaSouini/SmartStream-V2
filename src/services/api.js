@@ -5,7 +5,8 @@ export async function getChannels(){
         const response = await fetch(API_URL);
 
         if(response.ok){
-            return await response.json();
+            const channels = await response.json();
+            return channels;
         }
 
         if(response.status === 404){
@@ -21,4 +22,3 @@ export async function getChannels(){
         throw error ; 
     }
 }
-
