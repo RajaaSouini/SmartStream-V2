@@ -1,5 +1,7 @@
-export const API_URL = 'https://6af1eb5442c6561ced38cbc8.mockapi.io/channels';
+//export const API_URL = 'https://6af1eb5442c6561ced38cbc8.mockapi.io/channels';
 
+
+/*
 
 async function updateChannels(){
     const response = await fetch(API_URL);
@@ -16,4 +18,4 @@ async function updateChannels(){
     console.log('Terminé');
 }
 
-updateChannels();
+updateChannels();*/

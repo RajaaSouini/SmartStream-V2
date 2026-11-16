@@ -1,4 +1,6 @@
-import { API_URL } from "../config.js";
+//import { API_URL } from "../config.js";
+const API_URL = 'https://6af1eb5442c6561ced38cbc8.mockapi.io/channels';
+
 //verifier que la res est bonne
 export async function getChannels(){
     try{
@@ -22,3 +24,20 @@ export async function getChannels(){
         throw error ; 
     }
 }
+
+async function updateChannels(){
+    const response = await fetch(API_URL);
+    const channels = await response.json();
+
+    for(const channel of channels){
+        await fetch(`${API_URL}/${channel.id}`, {
+            method: "PUT",
+            headers: {"Content-Type" : "application/json"},
+            body: JSON.stringify({isFavorite : false , isBlackListed: false}),
+        });
+        console.log(`${channel.name}`);
+        }
+    console.log('Terminé');
+}
+
+updateChannels();
