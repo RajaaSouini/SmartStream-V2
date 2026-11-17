@@ -1,7 +1,21 @@
 import { createChannel } from "../services/api.js";
-const textRegex = /^[a-zA-Z0-9]{2,}$/;
+const textRegex = /^[a-zA-Z0-9À-ÿ \-_.]{2,}$/;
 const numRegex = /^[0-9]{1,4}$/;
-export function addChannel(){
+
+export function showForm(){
+    const afficher = document.getElementById('ajouter-channel-btn');
+    const formS = document.querySelector('#form-ajout');
+    const fermer = document.getElementById('btn-fermer');
+
+    afficher.addEventListener('click' , function(){
+        formS.classList.remove('hidden');
+    })
+
+    fermer.addEventListener('click' , function(){
+        formS.classList.add('hidden');
+    })
+}
+export function addChannel(channels , onChange){
     const form = document.querySelector('form');
     const btn = document.getElementById('btn-form');
     const erreurNom = document.getElementById('erreur-nom');
@@ -9,7 +23,7 @@ export function addChannel(){
     const erreurCateg = document.getElementById('erreur-categ');
     const erreurLogo = document.getElementById('erreur-logo');
 
-    form.addEventListener('submit' , function(e){
+    form.addEventListener('submit' ,async function(e){
         e.preventDefault();
 
         const name = document.getElementById('name-form').value.trim();
@@ -37,6 +51,34 @@ export function addChannel(){
             valide = false;
         }
         if(!valide) return;
+
+        const newChannel = {
+                        "channelNumber": num,
+                        "name": name,
+                        "category": category,
+                        "country": "France",
+                        "countryCode": "FR",
+                        "logo": "https://ui-avatars.com/api/?name=TLC&size=128&background=0EA5E9&color=fff&bold=true&rounded=true",
+                        "previewImage": "https://picsum.photos/seed/tlc/800/450",
+                        "streamUrl": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+                        "isLive": true,
+                        "epg": {
+                        "currentProgram": "La maison de mes rêves",
+                        "startTime": "20:30",
+                        "endTime": "21:20",
+                        "progressPercentage": 40
+                        },
+                        "isFavorite": false,
+                        "isBlackListed": false
+                    };
+        try{
+            const creer = await createChannel(newChannel);
+            channels.push(creer);
+            onChange();
+            form.reset();
+        }catch(error){
+            erreurNom.textContent = error.message ;
+        }
     })
 
 }
