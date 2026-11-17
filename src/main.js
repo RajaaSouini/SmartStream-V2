@@ -7,7 +7,8 @@ import { renderCountries } from "./ui/countryList.js";
 import { filterChannels } from "./utils/filter.js";
 
 import { favoriChange } from "./utils/favorites.js";
-import { hiddenIds , blackList} from "./utils/blackList.js";
+// import { hiddenIds , blackList} from "./utils/blackList.js";
+import { blackList } from "./utils/blackList.js";
 import { renderBlackList } from "./ui/blacklistUi.js";
 async function init() {
     hideError();
@@ -30,23 +31,36 @@ async function init() {
         //     result = filterChannels(result);
         //     renderChannels(result) ;
         // }
+        // function updateList(){
+        //     let result = channels.filter((c)=> !hiddenIds.includes(c.id));
+
+        //     if(selectedCountry !== "all"){
+        //         result = result.filter((c) => c.country === selectedCountry);
+        //     }
+
+        //     result = filterChannels(result);
+        //     renderChannels(result) ;
+        //     renderBlackList(channels.filter((c)=>hiddenIds.includes(c.id)))
+            
+        // }
+
         function updateList(){
-            let result = channels.filter((c)=> !hiddenIds.includes(c.id));
+            let result = channels.filter((ch) => !ch.isBlackListed);
 
             if(selectedCountry !== "all"){
                 result = result.filter((c) => c.country === selectedCountry);
             }
+            result = filterChannels(result);         
+            renderChannels(result);
+            renderBlackList(channels.filter((c)=> c.isBlackListed));
 
-            result = filterChannels(result);
-            renderChannels(result) ;
-            renderBlackList(channels.filter((c)=>hiddenIds.includes(c.id)))
-            
         }
 
-        renderChannels(channels);
+        //renderChannels(channels);
         renderCountries(channels);
-        renderBlackList([]);
-        blackList(updateList);
+        updateList();
+        //renderBlackList([]);
+        blackList(channels , updateList);
         // console.log(channels);
 
         searchInput.addEventListener('input' , updateList);
