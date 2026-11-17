@@ -30,7 +30,7 @@ export function renderChannels(channels){
                         </div> 
                     </div>
                     <div class="flex gap-4">
-                        <img src="./assets/icons/favoriVide.png" class="size-8 img-fav" >
+                        <img src="${channel.isFavorite ? './assets/icons/favoriPlein.png' : './assets/icons/favoriVide.png' }" class="size-8 img-fav" >
                         <img src="./assets/icons/texte-indesirable.png" class="size-10 spam" >
                     </div>                   
                 </button>`;

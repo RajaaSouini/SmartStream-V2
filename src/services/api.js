@@ -40,9 +40,9 @@ async function updateChannels(){
     console.log('Terminé');
 }
 
-updateChannels();
+//updateChannels();
 
-async function createChannel(channel){
+export async function createChannel(channel){
 
     const response =await fetch(API_URL, {
             method: "POST",
@@ -51,7 +51,7 @@ async function createChannel(channel){
         });
     return response.json();
 }
-async function deleteChannel(id){
+export async function deleteChannel(id){
     const response = await fetch(API_URL + "/" + id ,
         {
             method: "DELETE",
@@ -59,7 +59,7 @@ async function deleteChannel(id){
     return await response.json();
 
 }
-async function updateChannel(channel , id) {
+export async function updateChannel(channel , id) {
      const response =await fetch(API_URL + "/" + id , {
             method: "PUT",
             headers: {"Content-Type" : "application/json"},

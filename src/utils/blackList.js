@@ -1,11 +1,10 @@
-
-
-export const hiddenIds = [];
-
-export function blackList(onChange){
+import { updateChannel } from "../services/api.js";
+//export const hiddenIds = [];           
+                
+export function blackList(channels , onChange){
     const container = document.getElementById('channel-list');
 
-    container.addEventListener('click' , function(e){
+    container.addEventListener('click' ,async function(e){
         const btn = e.target.closest('.spam');
         if(!btn) return;
         
@@ -14,21 +13,31 @@ export function blackList(onChange){
 
         const id = encetre.dataset.id ;
 
-        if(!hiddenIds.includes(id)){
-            hiddenIds.push(id);
-        }
-
+        const channel = channels.find((ch) => ch.id === id);
+        channel.isBlackListed = true ;
         onChange();
+
+        // if(!hiddenIds.includes(id)){
+        //     hiddenIds.push(id);
+        // }
+
+        // onChange();
+        await updateChannel(channel , channel.id);
     });
 
-    document.getElementById('blackListe').addEventListener('click', function(e){
+    document.getElementById('blackListe').addEventListener('click',async function(e){
         const btn = e.target.closest('.restore');
         if(!btn) return;
 
-        const index = hiddenIds.indexOf(btn.dataset.id);
-        if(index !== -1){
-            hiddenIds.splice(index ,1);
-        }
+        const channel = channels.find((ch)=> ch.id === btn.dataset.id);
+
+        channel.isBlackListed = false ;
         onChange();
+        await updateChannel(channel , channel.id);
+        // const index = hiddenIds.indexOf(btn.dataset.id);
+        // if(index !== -1){
+        //     hiddenIds.splice(index ,1);
+        // }
+        // onChange();
     });
 }
