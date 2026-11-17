@@ -1,22 +1,29 @@
-export function favoriChange(){
-    const favoriContainer = document.querySelector('.favori-container');
-    const container = document.getElementById('channel-list');
+import { updateChannel } from "../services/api.js";
 
-    if(!container) return;
-    document.addEventListener('click' , function(e){
+export function favoriChange(channels , onChange){               
+    document.addEventListener('click' ,async function(e){
         const elemAchanger = e.target.closest('.img-fav');
-        const channel = elemAchanger.closest('.channel');
+        if(!elemAchanger) return ;
 
-        if(elemAchanger){
-            if(elemAchanger.src.includes('favoriPlein.png')){
-                elemAchanger.src = './assets/icons/favoriVide.png';
-                // container.appendChild(channel);
+        const item = elemAchanger.closest('[data-id]');
+        if(!item) return; 
 
-            }else{
-                elemAchanger.src = './assets/icons/favoriPlein.png';
-                // favoriContainer.appendChild(channel) ;
-            }
-        }
+        const channel = channels.find((ch) => ch.id === item.dataset.id);
+        
+        channel.isFavorite = !channel.isFavorite ;
+        onChange();
+        await updateChannel(channel , channel.id);
+
+        // if(elemAchanger){
+        //     if(elemAchanger.src.includes('favoriPlein.png')){
+        //         elemAchanger.src = './assets/icons/favoriVide.png';
+        //         // container.appendChild(channel);
+
+        //     }else{
+        //         elemAchanger.src = './assets/icons/favoriPlein.png';
+        //         // favoriContainer.appendChild(channel) ;
+        //     }
+        // }
     })
 }
 

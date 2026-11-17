@@ -22,7 +22,7 @@ export function blackList(channels , onChange){
         // }
 
         // onChange();
-        updateChannel(channel , channel.id);
+        await updateChannel(channel , channel.id);
     });
 
     document.getElementById('blackListe').addEventListener('click',async function(e){
