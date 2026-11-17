@@ -11,6 +11,7 @@ import { favoriChange } from "./utils/favorites.js";
 import { blackList } from "./utils/blackList.js";
 import { renderBlackList } from "./ui/blacklistUi.js";
 import { showFavoriOrAll , filterFavori } from "./utils/allOrFavori.js";
+import { addChannel, showForm } from "./utils/addChannel.js";
 async function init() {
     hideError();
     showLoader();
@@ -21,6 +22,8 @@ async function init() {
         const searchInput = document.getElementById('search-input');
         //search
         let selectedCountry = "all";
+        addChannel(channels , updateList);
+        showForm();
 
         // function updateList(){
         //     let result = channels;
@@ -71,11 +74,16 @@ async function init() {
         searchInput.addEventListener('input' , updateList);
 
         //ouvrir et fermer le panneau 
+        if(localStorage.getItem('sidebar') === 'true'){
+            sidebar.classList.remove('hidden');
+        }
         document.getElementById('country-toggle').addEventListener('click', ()=>{
             sidebar.classList.remove('hidden');
+            localStorage.setItem('sidebar' , 'true');
         });
         document.getElementById("country-close").addEventListener('click' , ()=>{
             sidebar.classList.add('hidden');
+            localStorage.setItem('sidebar' , 'false');
         });
 
         //click sur un pays 
@@ -99,8 +107,7 @@ async function init() {
             // sidebar.classList.add('hidden');
             updateList();
         })
-        //favoriChange();
-
+        //favoriChange();       
         //click sur une chaine
         //document.getElementById('channel-list')
         document.addEventListener('click' , function(e){

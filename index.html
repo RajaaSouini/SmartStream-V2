@@ -37,6 +37,7 @@
             <div>
                 <button id="tout-channels" class="text-[#E8ECF5] border rounded-xl p-2">All Channels</button>
                 <button id="favories-channels" class="text-[#E8ECF5] border rounded-xl p-2">Favories</button>
+                <button id="ajouter-channel-btn"  class="text-[#E8ECF5] border rounded-xl p-2">Ajouter channel</button>
             </div>
             <div>
                 <p class="text-[#A3ADC2] flex justify-between">FAVORIES</p>
@@ -84,6 +85,33 @@
 
         </article>
     </main>
+    <section id="form-ajout" class="hidden flex flex-col gap-4 absolute bg-[#C9BEFF] top-30 left-[10%] w-full md:w-[50%] lg:w-[40%] font-mono text-[#6A4BF0] p-8 rounded-xl" >
+        <h3 class="text-3xl">Ajouter une chaine</h3>
+        <form action="" class="flex flex-col gap-8 ">
+            <div class="flex flex-col gap-4">
+                <label for="name">Nom de la chaine</label>
+                <input id="name-form" type="text" class="border border-[#6A4BF0] rounded-full text-center text-[#6A4BF0] p-2" placeholder="name of channel">
+                <span id="erreur-nom" class="text-[#8B0000]"></span>
+            </div>
+            <div class="flex flex-col gap-4">
+                <label for="channelNumber">Numéro de la chaine</label>
+                <input id="num-form" type="text"  class="border border-[#6A4BF0] rounded-full text-center text-[#6A4BF0] p-2" placeholder="number of channel">
+                <span id="erreur-num" class="text-[#8B0000]"></span>
+            </div>
+            <div class="flex flex-col gap-4">
+                <label for="category">Category de la chaine</label>
+                <input id="categ-form" type="text"  class="border border-[#6A4BF0] rounded-full text-center text-[#6A4BF0] p-2" placeholder="category of channel">
+                <span id="erreur-categ" class="text-[#8B0000]"></span>
+            </div>
+            <div class="flex flex-col gap-4">
+                <label for="logo">Logo de la chaine</label>
+                <input id="logo-form" type="file"  class="border border-[#6A4BF0] rounded-full text-center text-[#6A4BF0] p-2">
+                <span id="erreur-logo" class="text-[#8B0000]"></span>
+            </div>
+            <button type="submit" id="btn-form" class="border bg-[#6A4BF0] text-white rounded-3xl p-2">Ajouter</button>
+            <button type="button" id="btn-fermer" class="border bg-white text-[#6A4BF0] rounded-3xl p-2">Fermer</button>
+        </form>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
     <script type="module" src="./src/main.js" ></script>
 </body>
