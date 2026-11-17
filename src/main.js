@@ -97,7 +97,8 @@ async function init() {
         //favoriChange();
 
         //click sur une chaine
-        document.getElementById('channel-list').addEventListener('click' , function(e){
+        //document.getElementById('channel-list')
+        document.addEventListener('click' , function(e){
             if(e.target.closest('.spam , .img-fav')) return;
             const button = e.target.closest('button');
 
