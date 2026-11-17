@@ -27,16 +27,4 @@ export function favoriChange(channels , onChange){
     })
 }
 
-
-//  <div class="flex flex-col gap-8">
-//             <div>
-//                 <button id="tout-channels" class="text-[#E8ECF5] border rounded-xl p-2">All Channels</button>
-//                 <button id="favories-channels" class="text-[#E8ECF5] border rounded-xl p-2">Favories</button>
-//             </div>
-//             <div>
-//                 <p class="text-[#A3ADC2] flex justify-between">FAVORIES</p>
-//                 <div class="favori-container">
-
-//                 </div>
-//             </div>
-//         </div>
+        

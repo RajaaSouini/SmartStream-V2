@@ -68,48 +68,4 @@ export async function updateChannel(channel , id) {
     return response.json();
 }
 
-// updateChannel({
-//     "id": "1",
-//     "channelNumber": "4000",
-//     "name": "FR - DISCOVERY ID FHD",
-//     "category": "DOCUMENTAIRE",
-//     "country": "France",
-//     "countryCode": "FR",
-//     "logo": "https://ui-avatars.com/api/?name=DID&size=128&background=0EA5E9&color=fff&bold=true&rounded=true",
-//     "previewImage": "https://picsum.photos/seed/discovery/800/450",
-//     "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-//     "isLive": true,
-//     "epg": {
-//       "currentProgram": "Habitations en péril",
-//       "startTime": "20:50",
-//       "endTime": "21:45",
-//       "progressPercentage": 65
-//     },
-//     "isFavorite": false,
-//     "isBlackListed": false
-//   } , 1);
-
-// deleteChannel(35);
-
-// createChannel(
-//      {
-//     "id": Date.now(),
-//     "channelNumber": "8007",
-//     "name": "GB - NATURE Channel new",
-//     "category": "DOCUMENTAIRE",
-//     "country": "Royaume-Uni",
-//     "countryCode": "GB",
-//     "logo": "https://ui-avatars.com/api/?name=NUK&size=128&background=0EA5E9&color=fff&bold=true&rounded=true",
-//     "previewImage": "https://picsum.photos/seed/natureuk/800/450",
-//     "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-//     "isLive": true,
-//     "epg": {
-//       "currentProgram": "Wild Britain",
-//       "startTime": "20:00",
-//       "endTime": "21:00",
-//       "progressPercentage": 90
-//     },
-//     "isFavorite": false,
-//     "isBlackListed": false
-//   },
-// );
+            
