@@ -22,7 +22,9 @@ export function blackList(channels , onChange){
         // }
 
         // onChange();
-        await updateChannel(channel , channel.id);
+        const confirmed =confirm("Est ce que vous souaiter l ajouter vraiment à black list ? ");
+        if(confirmed)await updateChannel(channel , channel.id);
+        
     });
 
     document.getElementById('blackListe').addEventListener('click',async function(e){
