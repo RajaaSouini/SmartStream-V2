@@ -11,6 +11,7 @@ import { favoriChange } from "./utils/favorites.js";
 import { blackList } from "./utils/blackList.js";
 import { renderBlackList } from "./ui/blacklistUi.js";
 import { showFavoriOrAll , filterFavori } from "./utils/allOrFavori.js";
+import { addChannel } from "./utils/addChannel.js";
 async function init() {
     hideError();
     showLoader();
@@ -21,6 +22,7 @@ async function init() {
         const searchInput = document.getElementById('search-input');
         //search
         let selectedCountry = "all";
+        addChannel();
 
         // function updateList(){
         //     let result = channels;
@@ -99,8 +101,7 @@ async function init() {
             // sidebar.classList.add('hidden');
             updateList();
         })
-        //favoriChange();
-
+        //favoriChange();       
         //click sur une chaine
         //document.getElementById('channel-list')
         document.addEventListener('click' , function(e){
