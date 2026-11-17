@@ -74,11 +74,16 @@ async function init() {
         searchInput.addEventListener('input' , updateList);
 
         //ouvrir et fermer le panneau 
+        if(localStorage.getItem('sidebar') === 'true'){
+            sidebar.classList.remove('hidden');
+        }
         document.getElementById('country-toggle').addEventListener('click', ()=>{
             sidebar.classList.remove('hidden');
+            localStorage.setItem('sidebar' , 'true');
         });
         document.getElementById("country-close").addEventListener('click' , ()=>{
             sidebar.classList.add('hidden');
+            localStorage.setItem('sidebar' , 'false');
         });
 
         //click sur un pays 

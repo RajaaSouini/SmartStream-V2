@@ -7,12 +7,17 @@ export function showForm(){
     const formS = document.querySelector('#form-ajout');
     const fermer = document.getElementById('btn-fermer');
 
+    if(localStorage.getItem('formOpen') === 'true'){
+        formS.classList.remove('hidden');
+    }
     afficher.addEventListener('click' , function(){
         formS.classList.remove('hidden');
+        localStorage.setItem('formOpen' , 'true');
     })
 
     fermer.addEventListener('click' , function(){
         formS.classList.add('hidden');
+        localStorage.setItem('formOpen' , 'false');
     })
 }
 export function addChannel(channels , onChange){
