@@ -6,12 +6,13 @@ import { renderPreview } from "./ui/preview.js";
 import { renderCountries } from "./ui/countryList.js";
 import { filterChannels } from "./utils/filter.js";
 import { renderFavorites } from "./ui/favori.js";
-import { favoriChange } from "./utils/favorites.js";
-// import { hiddenIds , blackList} from "./utils/blackList.js";
-import { blackList } from "./utils/blackList.js";
+// import { favoriChange } from "./utils/favorites.js";          
+// import { blackList } from "./utils/blackList.js";
 import { renderBlackList } from "./ui/blacklistUi.js";
 import { showFavoriOrAll , filterFavori } from "./utils/allOrFavori.js";
-import { addChannel, showForm } from "./utils/addChannel.js";
+import { addChannel, showForm } from "./utils/addChannel.js"; 
+import { actions } from "./utils/actions.js";
+
 async function init() {
     hideError();
     showLoader();
@@ -24,30 +25,7 @@ async function init() {
         let selectedCountry = "all";
         addChannel(channels , updateList);
         showForm();
-
-        // function updateList(){
-        //     let result = channels;
-
-        //     if(selectedCountry !== "all"){
-        //         result = channels.filter((c) => c.country === selectedCountry);
-        //     }
-
-        //     result = filterChannels(result);
-        //     renderChannels(result) ;
-        // }
-        // function updateList(){
-        //     let result = channels.filter((c)=> !hiddenIds.includes(c.id));
-
-        //     if(selectedCountry !== "all"){
-        //         result = result.filter((c) => c.country === selectedCountry);
-        //     }
-
-        //     result = filterChannels(result);
-        //     renderChannels(result) ;
-        //     renderBlackList(channels.filter((c)=>hiddenIds.includes(c.id)))
-            
-        // }
-
+       
         function updateList(){
             let result = channels.filter((ch) => !ch.isBlackListed);
 
@@ -65,11 +43,10 @@ async function init() {
 
         //renderChannels(channels);
         renderCountries(channels);
-        updateList();
-        //renderBlackList([]);
-        blackList(channels , updateList);
-        // console.log(channels);
-        favoriChange(channels, updateList);
+        updateList();    
+        // blackList(channels , updateList);       
+        // favoriChange(channels, updateList);
+        actions(channels , updateList);
         showFavoriOrAll(updateList);
         searchInput.addEventListener('input' , updateList);
 
@@ -95,27 +72,15 @@ async function init() {
             selectedCountry = boutton.dataset.country;
             document.getElementById('country-title').textContent = boutton.dataset.name;
             sidebar.classList.add('hidden');
-            // const count = boutton.dataset.country ;
-            // let filtred = channels ;
 
-            // if(count !== "all"){
-            //     filtred = channels.filter((c) => c.country === count);
-            // }
-
-            // renderChannels(filtred);
-            // document.getElementById('country-title').textContent = boutton.dataset.name;
-            // sidebar.classList.add('hidden');
             updateList();
         })
-        //favoriChange();       
-        //click sur une chaine
-        //document.getElementById('channel-list')
+
         document.addEventListener('click' , function(e){
             if(e.target.closest('.spam , .img-fav')) return;
             const button = e.target.closest('button');
 
-            if(!button) return;
-            //console.log(button.dataset.id);
+            if(!button) return;               
 
             const channel = channels.find((c) => c.id === button.dataset.id);
             renderPreview(channel);
