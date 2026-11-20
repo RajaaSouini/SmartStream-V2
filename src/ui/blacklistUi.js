@@ -13,7 +13,7 @@ export function renderBlackList(channels){
             <div class="flex gap-4 border border-[#26314D] rounded-xl p-2 w-full items-center">
                 <img src="${channel.logo}" class="size-12" alt="${channel.name}">
                 <h2 class="text-[#E8ECF5]">${channel.name}</h2>
-                <button class="restore text-[#E8ECF5] px-2" data-id="${channel.id}">X</button>
+                <button data-action="restore" class="restore text-[#E8ECF5] px-2" data-id="${channel.id}">X</button>
             </div>
         `;
     })

@@ -20,7 +20,7 @@ export function renderFavorites(channels){
                         </div> 
                     </div>
                     <div class="flex gap-4">
-                        <img src="${channel.isFavorite ? './assets/icons/favoriPlein.png' : './assets/icons/favoriVide.png' }" class="size-8 img-fav" >
+                        <img src="${channel.isFavorite ? './assets/icons/favoriPlein.png' : './assets/icons/favoriVide.png' }" class="size-8 img-fav" data-action="favori" >
                     </div>                   
                 </button>
         `;
