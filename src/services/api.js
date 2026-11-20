@@ -33,7 +33,7 @@ async function updateChannels(){
         await fetch(`${API_URL}/${channel.id}`, {
             method: "PUT",
             headers: {"Content-Type" : "application/json"},
-            body: JSON.stringify({isFavorite : false , isBlackListed: false}),
+            body: JSON.stringify({lastWatchedAt : null }),
         });
         //console.log(`${channel.name}`);
         }
