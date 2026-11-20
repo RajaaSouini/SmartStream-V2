@@ -1,13 +1,11 @@
-import { getChannels } from "./services/api.js";
+import { getChannels, updateChannel } from "./services/api.js";
 import { showLoader , hideLoader } from "./ui/loader.js";
 import { showError , hideError } from "./ui/error.js";
 import { renderChannels } from "./ui/channelList.js";
 import { renderPreview } from "./ui/preview.js";
 import { renderCountries } from "./ui/countryList.js";
 import { filterChannels } from "./utils/filter.js";
-import { renderFavorites } from "./ui/favori.js";
-// import { favoriChange } from "./utils/favorites.js";          
-// import { blackList } from "./utils/blackList.js";
+import { renderFavorites } from "./ui/favori.js";          
 import { renderBlackList } from "./ui/blacklistUi.js";
 import { showFavoriOrAll , filterFavori } from "./utils/allOrFavori.js";
 import { addChannel, showForm } from "./utils/addChannel.js"; 
@@ -48,12 +46,9 @@ async function init() {
             renderBlackList(channels.filter((c)=> c.isBlackListed));
             renderFavorites(channels.filter((c)=> c.isFavorite && !c.isBlackListed));
         }
-
-        //renderChannels(channels);
+    
         renderCountries(channels);
-        updateList();    
-        // blackList(channels , updateList);       
-        // favoriChange(channels, updateList);
+        updateList();             
         actions(channels , updateList);
         showFavoriOrAll(updateList);
         searchInput.addEventListener('input' , updateList);
@@ -84,18 +79,23 @@ async function init() {
             updateList();
         })
 
-        document.addEventListener('click' , function(e){
-            if(e.target.closest('.spam , .img-fav')) return;
+        document.addEventListener('click' ,async function(e){
+            if(e.target.closest(' .spam , .img-fav')) return;
+
             const button = e.target.closest('button');
 
             if(!button) return;               
 
             const channel = channels.find((c) => c.id === button.dataset.id);
-            channel.lastWatchedAt = Date.now();
-            // lastWatchedArray.push(item);
-            // console.log(lastWatchedArray);
+            channel.lastWatchedAt = Date.now();           
             renderPreview(channel);
             updateList();
+
+            try{
+                await updateChannel(channel.id ,channel);
+            }catch(error){
+                console.log("Erreur" , error.message);
+            }
         })
     }catch (error){
         showError(error , init);
