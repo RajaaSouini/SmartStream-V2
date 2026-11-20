@@ -12,7 +12,7 @@ import { renderBlackList } from "./ui/blacklistUi.js";
 import { showFavoriOrAll , filterFavori } from "./utils/allOrFavori.js";
 import { addChannel, showForm } from "./utils/addChannel.js"; 
 import { actions } from "./utils/actions.js";
-
+import { lastWatchedArray } from "./utils/lastWatched.js";
 async function init() {
     hideError();
     showLoader();
@@ -83,6 +83,10 @@ async function init() {
             if(!button) return;               
 
             const channel = channels.find((c) => c.id === button.dataset.id);
+            const item = channels.find((it) => it.id === channel.id);
+            item.lastWatchedAt = Date.now();
+            lastWatchedArray.push(item);
+            console.log(lastWatchedArray);
             renderPreview(channel);
         })
     }catch (error){
