@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="./dist/output.css">
 </head>
 <body class="lg:flex  lg:flex-row flex flex-col-reverse ">
+    <!--Confirmation -->
+    <div class="hidden confirmer bg-white absolute top-0 left-[40%] rounded-xl p-8 flex flex-col gap-8">
+        <p>Voulez vous vraiment l'envoyer à blacklist ?</p>
+        <div class="flex justify-around">
+            <button type="button" id="oui" class="oui border bg-[#6A4BF0] text-white rounded-xl py-2 px-8">Oui</button>
+            <button type="button" id="non" class="non border bg-white text-[#6A4BF0] rounded-xl py-2 px-8">Annuler</button>
+        </div>
+    </div>
     <!--sidebar-->
     <div id="country-sidebar" class="hidden fixed top-0 left-0 h-full w-72 bg-[#0F1523] p-6 z-10">
         <div class="flex flex-col gap-4">
@@ -34,10 +42,15 @@
 
         <input id="search-input" class="text-[#A3ADC2] rounded-xl p-2 w-full border border-[#A3ADC2]" type="text" placeholder="Recherche Tv">
         <div class="flex flex-col gap-8">
-            <div>
-                <button id="tout-channels" class="text-[#E8ECF5] border rounded-xl p-2">All Channels</button>
-                <button id="favories-channels" class="text-[#E8ECF5] border rounded-xl p-2">Favories</button>
-                <button id="ajouter-channel-btn"  class="text-[#E8ECF5] border rounded-xl p-2">Ajouter channel</button>
+            <div class="flex flex-col  gap-4">
+                <div>
+                    <button id="tout-channels" class="text-[#E8ECF5] border rounded-xl p-2">All Channels</button>
+                    <button id="favories-channels" class="text-[#E8ECF5] border rounded-xl p-2">Favories</button>
+                </div>
+                <div>
+                    <button id="ajouter-channel-btn"  class="text-[#E8ECF5] border rounded-xl p-2">Ajouter channel</button>
+                    <input id="ajouter-json" type="file" class="text-[#E8ECF5] border rounded-xl p-2">
+                </div>
             </div>
             <div>
                 <p class="text-[#A3ADC2] flex justify-between">FAVORIES</p>
@@ -85,7 +98,7 @@
 
         </article>
     </main>
-    <section id="form-ajout" class="hidden flex flex-col gap-4 absolute bg-[#C9BEFF] top-30 left-[10%] w-full md:w-[50%] lg:w-[40%] font-mono text-[#6A4BF0] p-8 rounded-xl" >
+    <section id="form-ajout" class="hidden flex flex-col gap-4 absolute bg-[#C9BEFF] top-[20%] left-[10%] w-full md:w-[50%] lg:w-[40%] font-mono text-[#6A4BF0] p-8 rounded-xl" >
         <h3 class="text-3xl">Ajouter une chaine</h3>
         <form action="" class="flex flex-col gap-8 ">
             <div class="flex flex-col gap-4">
@@ -115,5 +128,4 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
     <script type="module" src="./src/main.js" ></script>
 </body>
-</html>
-             
+</html>                         

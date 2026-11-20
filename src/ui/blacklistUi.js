@@ -1,6 +1,8 @@
 export function renderBlackList(channels){
     const container = document.getElementById('blackListe');
     container.innerHTML = ""; 
+
+    container.className= 'flex flex-col gap-4';
     
     if(channels.length  === 0){
         container.innerHTML += `

@@ -97,7 +97,11 @@ export function addChannel(channels , onChange){
             };
 
             try{
-                await updateChannel(channel.id , update);
+                const saved = await updateChannel(channel.id , update);
+                //modifie l objet existant sur place
+                Object.assign(channel , saved);
+
+                // await updateChannel(channel.id , update);
                 onChange();
 
                 modeAjout();
@@ -106,6 +110,7 @@ export function addChannel(channels , onChange){
             }catch(error){
                 erreurNom.textContent = error.message ;
             }
+            return;
         }
         //mode ajout
         const newChannel = {
