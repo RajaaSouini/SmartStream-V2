@@ -25,25 +25,7 @@ export function actions(channels , onChange){
             }
 
             if(action === "spam"){
-
-                //modal confirmation 
-                // const modal = document.querySelector('.confirmer');        
-                // document.getElementById('non').addEventListener('click', function(){
-                //     modal.classList.add('hidden');
-                //     return ;
-                // });
-
-                // modal.classList.remove('hidden');
-
-                // document.getElementById('oui').addEventListener('click',async function(){
-                //     modal.classList.add('hidden');
-                //     channel.isBlackListed = true ;
-                //     onChange();
-                //     await updateChannel(channel.id , channel);
-                // });
-                
-                
-
+            
                 const confirmed =confirm("Est ce que vous souaiter l ajouter vraiment à black list ? ");
                 if(!confirmed) return ;
                 

@@ -1,7 +1,6 @@
 import { playStream } from "./player.js"; 
 import { renderEpg } from "./epg.js";
-export function renderPreview(channel){
-    //document.getElementById('preview-image').src = channel.previewImage ;
+export function renderPreview(channel){           
     document.getElementById('preview-video').poster = channel.previewImage ;
     document.getElementById('preview-title').textContent =
     channel.channelNumber + "-" + channel.name;
