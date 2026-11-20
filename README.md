@@ -29,18 +29,27 @@ SmartStream/
 │   └── icons/
 ├── src/       **code source js de l'application** 
 │   ├── services/   **Les données**
-│   │   ├── api.js   **getchannels() fetch api**
-│   │   └── storage.js **Sauvegarde et lecture localStorage**
+│   │   ├── api.js   **getchannels() fetch api and crud**       
 │   ├── ui/          **Affichage**
 │   │   ├── channelList.js   **Affichage de laa liste des chaines       groupés par catégorie**
 │   │   └── countryList.js **Affiche la liste des pays dans le sidebar**
 |   |   └── error.js **Affiche et cache le msg d erreur**
 |   |   └── loader.js **Affiche et cache loader**
 |   |   └── preview.js **afffiche le nom le numero l image de la chaine active**
+|   |   └── blackListUi.js
+|   |   └── favori.js
+|   |   └── preview.js **afffiche le nom le numero l 
+|   |   └── epg.js
+|   |   └── 
+
 |   |
 │   ├── utils/
 │   │   ├── filter.js **fltrer par nom et number**
 │   │   └── groupBy.js **group channels by category**
+│   │   ├── actions.js
+│   │   └── addchannel.js
+│   │   ├── addJson.js
+│   │   └── allOrFavori.js
 │   ├── main.js **chef d orchestre des fichiers js**
 │   └── config.js **appel de l api**
 ├── data/
