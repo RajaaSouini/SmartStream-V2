@@ -1,5 +1,6 @@
 
 import { updateChannel , deleteChannel } from "../services/api.js";
+import { openEdit } from "./addChannel.js";
 export function actions(channels , onChange){
     document.addEventListener('click',async function(event){
         const target = event.target.closest("[data-action]");
@@ -45,7 +46,7 @@ export function actions(channels , onChange){
             }
 
             if(action === "modifier"){
-                
+                openEdit(channel);
             }
         }catch(error){
             console.log("Erreur :" , error.message);
