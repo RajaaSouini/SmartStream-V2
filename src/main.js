@@ -12,12 +12,13 @@ import { renderBlackList } from "./ui/blacklistUi.js";
 import { showFavoriOrAll , filterFavori } from "./utils/allOrFavori.js";
 import { addChannel, showForm } from "./utils/addChannel.js"; 
 import { actions } from "./utils/actions.js";
-import { lastWatchedArray } from "./utils/lastWatched.js";
+
 async function init() {
     hideError();
     showLoader();
 
     try{
+        //const lastWatchedArray = [];
         const channels = await getChannels();
         const sidebar = document.getElementById('country-sidebar');
         const searchInput = document.getElementById('search-input');
@@ -35,7 +36,14 @@ async function init() {
             if(filterFavori.onlyFavorites){
                 result = result.filter((c)=>c.isFavorite);
             }
-            result = filterChannels(result);         
+            result = filterChannels(result); 
+            
+            const recent = result.filter((ch) => ch.lastWatchedAt).sort((a,b) => 
+                b.lastWatchedAt - a.lastWatchedAt).slice(0,5);
+
+            const autre = result.filter((ch) => !recent.includes(ch));
+            result = [...recent , ...autre];
+
             renderChannels(result);
             renderBlackList(channels.filter((c)=> c.isBlackListed));
             renderFavorites(channels.filter((c)=> c.isFavorite && !c.isBlackListed));
@@ -83,11 +91,11 @@ async function init() {
             if(!button) return;               
 
             const channel = channels.find((c) => c.id === button.dataset.id);
-            const item = channels.find((it) => it.id === channel.id);
-            item.lastWatchedAt = Date.now();
-            lastWatchedArray.push(item);
-            console.log(lastWatchedArray);
+            channel.lastWatchedAt = Date.now();
+            // lastWatchedArray.push(item);
+            // console.log(lastWatchedArray);
             renderPreview(channel);
+            updateList();
         })
     }catch (error){
         showError(error , init);
