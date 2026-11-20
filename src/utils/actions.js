@@ -1,7 +1,19 @@
 
 import { updateChannel , deleteChannel } from "../services/api.js";
 import { openEdit } from "./addChannel.js";
+
 export function actions(channels , onChange){
+    //modal confirmation 
+    const modal = document.querySelector('.confirmer');
+
+    document.getElementById('oui').addEventListener('click', function(){
+        modal.classList.add('hidden');
+    });
+
+    document.getElementById('non').addEventListener('click', function(){
+        modal.classList.remove('hidden');
+    });
+
     document.addEventListener('click',async function(event){
         const target = event.target.closest("[data-action]");
         if(!target)return ;
@@ -23,8 +35,26 @@ export function actions(channels , onChange){
             }
 
             if(action === "spam"){
+
+                // const container = document.querySelector('.confirmer');
+                // container.classList.remove('hidden');
+
+                // container.addEventListener('click' ,async function(e){
+                //     const btn = e.target.closest('button');
+                //     if(btn.classList.includes('oui')){
+                //         channel.isBlackListed = true ;
+                //         container.classList.add('hidden');
+                //         //channel.isFavorite = false ;
+                //     }
+                // })
+
+                // onChange();
+                // await updateChannel(channel.id , channel);
+                
+
                 const confirmed =confirm("Est ce que vous souaiter l ajouter vraiment à black list ? ");
                 if(!confirmed) return ;
+                
 
                 channel.isBlackListed = true ;
                 //channel.isFavorite = false ;

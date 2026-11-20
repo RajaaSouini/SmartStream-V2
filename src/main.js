@@ -11,6 +11,7 @@ import { showFavoriOrAll , filterFavori } from "./utils/allOrFavori.js";
 import { addChannel, showForm } from "./utils/addChannel.js"; 
 import { actions } from "./utils/actions.js";
 
+
 async function init() {
     hideError();
     showLoader();
@@ -24,6 +25,7 @@ async function init() {
         let selectedCountry = "all";
         addChannel(channels , updateList);
         showForm();
+       
        
         function updateList(){
             let result = channels.filter((ch) => !ch.isBlackListed);
