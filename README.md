@@ -15,7 +15,7 @@ Champs de recherche #151C2E
 #6A4BF0
 #8F77FF
 #B7A6FF
-#C9BEFF
+#c1bdd4
 #6A4BF0
 texte principale #E8ECF5
 texte secondaire #A3ADC2

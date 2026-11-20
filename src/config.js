@@ -1,1 +1,0 @@
-export const API_URL = 'https://6af1eb5442c6561ced38cbc8.mockapi.io/channels';
